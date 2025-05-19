@@ -11,6 +11,8 @@
 #7::Send #!7
 #8::Send #!8
 #9::Send #!9
+#0::Send #!0
+
 
 ;; Rebinding Moving Windows to Win + Shfit + Num
 #+1::Send !+1
@@ -22,6 +24,8 @@
 #+7::Send !+7
 #+8::Send !+8
 #+9::Send !+9
+#+0::Send !+0
+
 
 ;;;;? Power Toys ;;;;
 #+Return::Send !{Space} ;* Launch flow launcher ==> Win + Shift + Return

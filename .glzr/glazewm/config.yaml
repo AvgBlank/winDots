@@ -75,6 +75,7 @@ workspaces:
   - name: "7"
   - name: "8"
   - name: "9"
+  - name: "0"
 
 window_rules:
   # Move browsers to workspace 1.
@@ -201,6 +202,8 @@ keybindings:
     bindings: ["lwin+alt+8"]
   - commands: ["focus --workspace 9"]
     bindings: ["lwin+alt+9"]
+  - commands: ["focus --workspace 0"]
+    bindings: ["lwin+alt+0"]
 
   # Move the focused window's parent workspace to a monitor in a given
   # direction.
@@ -237,6 +240,8 @@ keybindings:
     bindings: ["alt+shift+8"]
   - commands: ["move --workspace 9", "focus --workspace 9"]
     bindings: ["alt+shift+9"]
+  - commands: ["move --workspace 0", "focus --workspace 0"]
+    bindings: ["alt+shift+0"]
 
   # Move focused window to a workspace but don't change focus
   - commands: ["move --workspace 1"]
@@ -257,3 +262,5 @@ keybindings:
     bindings: ["lwin+control+8"]
   - commands: ["move --workspace 9"]
     bindings: ["lwin+control+9"]
+  - commands: ["move --workspace 0"]
+    bindings: ["lwin+control+0"]
