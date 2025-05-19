@@ -2,7 +2,7 @@
 
 ;;;;;;;;;;;! Variables ;;;;;;;;;;;
 ;;;;? Applications ;;;;
-browser := "msedge" ;* Browser
+browser := "brave" ;* Browser
 terminal := "wt" ;* Terminal, wt = Windows Terminal
 code := "code" ;* Code editor, code=Visual Studio Code
 music := "spotify" ;* Music Client

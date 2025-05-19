@@ -84,7 +84,7 @@ window_rules:
   # Move Virtual Machine Platforms to workspace 2.
   - commands: ["move --workspace 2"]
     match:
-      - window_process: { regex: "vmware" }
+      - window_process: { regex: "vmware|slack|Slack" }
   # Move Terminals to workspace 3.
   - commands: ["move --workspace 3"]
     match:
@@ -106,6 +106,10 @@ window_rules:
       # Ignores picture-in-picture windows for browsers.
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
         window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
+
+      # Ignores Windows Command Palette
+      - window_process: { equals: "Microsoft.CmdPal.UI.exe" }
+
 
       # Ignore rules for various 3rd-party apps.
       - window_process: { equals: "PowerToys.PowerAccent" }
@@ -160,7 +164,7 @@ keybindings:
 
   # Change the focused window to be fullscreen.
   - commands: ["toggle-fullscreen"]
-    bindings: ["alt+f"]
+    bindings: ["lwin+shift+f"]
 
   # Minimize focused window.
   - commands: ["toggle-minimized"]
