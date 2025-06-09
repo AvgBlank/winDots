@@ -31,14 +31,30 @@
 #+Return::Send !{Space} ;* Launch flow launcher ==> Win + Shift + Return
 
 ;;;;? Arrow Keys ;;;;
-!h::Send {Left}
-!j::Send {Down}
-!k::Send {Up}
-!l::Send {Right}
-!^h::Send ^{Left}
-!^j::Send ^{Down}
-!^k::Send ^{Up}
-!^l::Send ^{Right}
+!h::Send {Left down}
+!h up::Send {Left up}
+
+!j::Send {Down down}
+!j up::Send {Down up}
+
+!k::Send {Up down}
+!k up::Send {Up up}
+
+!l::Send {Right down}
+!l up::Send {Right up}
+
+;; Ctrl + Alt + h/j/k/l
+!^h::Send ^{Left down}
+!^h up::Send ^{Left up}
+
+!^j::Send ^{Down down}
+!^j up::Send ^{Down up}
+
+!^k::Send ^{Up down}
+!^k up::Send ^{Up up}
+
+!^l::Send ^{Right down}
+!^l up::Send ^{Right up}
 
 ;;;;? Window Modifications ;;;;
 #+c::Send !{F4} ;* Close a program ==> Win + Shift + C
