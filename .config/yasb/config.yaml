@@ -22,10 +22,10 @@ bars:
       width: "100%"
       height: 32
     padding:
-      top: 4
-      left: 4
-      bottom: 4
-      right: 4
+      top: 10
+      left: 10
+      bottom: 10
+      right: 10
     widgets:
       left: [
           "home", 
@@ -67,7 +67,7 @@ widgets:
     type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
       offline_label: "GlazeWM Offline"
-      hide_empty_workspaces: false
+      hide_empty_workspaces: true
       hide_if_offline: false
   komorebi_workspaces:
     type: "komorebi.workspaces.WorkspaceWidget"
