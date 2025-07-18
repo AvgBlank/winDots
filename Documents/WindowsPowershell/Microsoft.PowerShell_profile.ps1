@@ -1,12 +1,3 @@
-########### Prompt ###########
-#### Using Starship for Prompt, Check Readme on How to Install ####
-function Invoke-Starship-TransientFunction {
-  &starship module character
-}
-Invoke-Expression (& "C:\Program Files\starship\bin\starship.exe" init powershell --print-full-init | Out-String)
-Enable-TransientPrompt
-
-
 ########### Aliases ###########
 #### Setting Vim as NeoVim ####
 Set-Alias vvim 'vi'
@@ -25,10 +16,6 @@ Set-Alias c "code"
 function ssn { shutdown -t 0 -s }
 function sr { shutdown -t 0 -r }
 function sfr { sudo shutdown -t 0 -r -fw }
-
-#### ls ####
-Set-Alias l ls
-Set-Alias ll ls
 
 #### cd ####
 function cdc {cd C:\Coding}
@@ -80,3 +67,55 @@ function cpwsh { code $env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.Pow
 # Github Powershell
 function vgpwsh { vim C:\Coding\Dotfiles\Windows\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 }
 function cgpwsh { code C:\Coding\Dotfiles\Windows\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 }
+
+
+########### Startup Functions ###########
+### Zoxide ###
+if (Get-Command zoxide -ErrorAction SilentlyContinue) {
+    # Initialize zoxide
+    Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
+    # Safely remove built-in 'cd' alias if it exists
+    if (Get-Alias cd -ErrorAction SilentlyContinue) {
+        try {
+            Remove-Item Alias:cd -Force -ErrorAction Stop
+        } catch {
+            Write-Warning "Could not remove existing 'cd' alias: $_"
+        }
+    }
+
+    # Set custom alias
+    Set-Alias cd z
+}
+
+#### Starship ####
+if (Get-Command starship -ErrorAction SilentlyContinue) {
+  function Invoke-Starship-TransientFunction {
+    &starship module character
+  }
+  Invoke-Expression (& "C:\Program Files\starship\bin\starship.exe" init powershell --print-full-init | Out-String)
+  Enable-TransientPrompt
+}
+
+#### Eza ####
+if (Get-Command eza -ErrorAction SilentlyContinue) {
+    if (Get-Alias ls -ErrorAction SilentlyContinue) {
+        try {
+            Remove-Item Alias:ls -Force -ErrorAction Stop
+        } catch {
+            Write-Warning "Could not remove existing 'ls' alias: $_"
+        }
+    }
+    Set-Alias ls eza
+    function l { eza -la @args }
+    function ll { eza -la @args }
+} else {
+  Set-Alias l ls
+  Set-Alias ll ls
+}
+
+
+#### Yazi ####
+if (Get-Command yazi -ErrorAction SilentlyContinue) {
+  Set-Alias y yazi
+}
