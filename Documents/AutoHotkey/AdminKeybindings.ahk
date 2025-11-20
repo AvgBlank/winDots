@@ -1,4 +1,6 @@
 #SingleInstance
+
+
 ;;;;;;;;;;;! Key Bindings ;;;;;;;;;;;
 ;;;;? Glaze WM ;;;;
 ;; Rebinding Workspaces to Win + Num
@@ -47,11 +49,11 @@
 !^h::Send ^{Left down}
 !^h up::Send ^{Left up}
 
-!^j::Send ^{Down down}
-!^j up::Send ^{Down up}
+!^j::Send {PgDn down}
+!^j up::Send {PgDn up}
 
-!^k::Send ^{Up down}
-!^k up::Send ^{Up up}
+!^k::Send {PgUp}
+!^k up::Send {PgUp up}
 
 !^l::Send ^{Right down}
 !^l up::Send ^{Right up}
