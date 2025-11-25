@@ -33,13 +33,13 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#a6e3a1"
+      color: "#fab387"
 
   # Visual effects to apply to non-focused windows.
   other_windows:
     border:
       enabled: true
-      color: "#181824"
+      color: "#181825"
 
 window_behavior:
   # New windows are created in this state whenever possible.

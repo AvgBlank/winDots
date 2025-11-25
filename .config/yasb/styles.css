@@ -1,15 +1,13 @@
 :root {
-    --red: #f38ba8;
-    --yellow: #f9e2af;
-    --green: #a6e3a1;
+    --peach: #fab387;
     --blue: #89b4fa;
     --lavender: #b4befe;
     --text: #cdd6f4;
     --overlay2: #9399b2;
-    --surface2: #585b70;
     --surface1: #45475a;
+    --surface2: #585b70;
     --base: #1e1e2e;
-    --mantle: #181824;
+    --mantle: #181825;
     --crust: rgba(17, 17, 27, 0.2);
     --main: #10151d;
     --widget-background: #24273a;
@@ -97,13 +95,13 @@ QToolTip {
     color: var(--lavender);
 }
 /* .glazewm-workspaces .ws-btn.populated { */
-/*     color: var(--green); */
+/*     color: var(--peach); */
 /* } */
 .glazewm-workspaces .ws-btn.active_populated {
-    color: var(--green);
+    color: var(--peach);
 }
 .glazewm-workspaces .ws-btn.active_empty {
-    color: var(--green);
+    color: var(--peach);
 }
 .apps-widget .label {
     font-size: 16px;
@@ -113,7 +111,7 @@ QToolTip {
     color: var(--text);
 }
 .clock-widget .icon {
-    color: var(--green);
+    color: var(--peach);
     margin-right: 4px;
 }
 .calendar {
@@ -206,7 +204,7 @@ QToolTip {
 }
 .power-menu-popup .button.hover .label,
 .power-menu-popup .button.hover .icon {
-    color: var(--green);
+    color: var(--peach);
 }
 .uptime {
     font-size: 16px;
@@ -215,7 +213,7 @@ QToolTip {
     font-weight: 600;
 }
 .volume-widget .icon {
-    color: var(--green);
+    color: var(--peach);
     margin-right: 4px;
 } 
 .volume-slider {
@@ -255,7 +253,7 @@ QToolTip {
 .weather-widget .icon {
     font-size: 18px;
     margin: 0 4px 1px 0;
-    color: var(--green);
+    color: var(--peach);
 }
 .weather-card {
     background-color:var(--crust);
@@ -356,22 +354,22 @@ QToolTip {
 	color: var(--surface1);
 }
 .notification-widget .icon {
-    color: var(--green);
+    color: var(--peach);
 }
 .cpu-widget .icon {
-    color: var(--green);
+    color: var(--peach);
     margin-right: 4px;
 }
 .memory-widget .icon {
-    color: var(--green);
+    color: var(--peach);
     margin-right: 4px;
 }
 .gpu-widget .icon {
-    color: var(--green);
+    color: var(--peach);
     margin-right: 4px;
 }
 .wifi-widget .icon{
-    color: var(--green);
+    color: var(--peach);
     margin-right: 4px;
 }
 
