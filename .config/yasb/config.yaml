@@ -148,7 +148,7 @@ widgets:
     options:
       label: "<span>\udb81\udf17</span>"
       menu_list:
-      - { title: "Home Folder", path: "~" }
+      - { title: "Home", path: "~" }
       - { title: "Download", path: "~\\Downloads" }
       - { title: "Documents", path: "~\\Documents" }
       - { title: "Pictures", path: "~\\Pictures" }
