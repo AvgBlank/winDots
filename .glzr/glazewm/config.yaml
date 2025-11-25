@@ -1,6 +1,6 @@
 general:
   # Whether to automatically focus windows underneath the cursor.
-  focus_follows_cursor: false
+  focus_follows_cursor: true
 
   # Whether to switch back and forth between the previously focused
   # workspace when focusing the current workspace.
@@ -17,14 +17,14 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "2px"
+  inner_gap: "8px"
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "2px"
-    right: "2px"
-    bottom: "2px"
-    left: "2px"
+    top: "8px"
+    right: "8px"
+    bottom: "8px"
+    left: "8px"
 
 window_effects:
   # Visual effects to apply to the focused window.
@@ -33,13 +33,13 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#46d9ff"
+      color: "#a6e3a1"
 
   # Visual effects to apply to non-focused windows.
   other_windows:
     border:
       enabled: true
-      color: "#282c34"
+      color: "#181824"
 
 window_behavior:
   # New windows are created in this state whenever possible.
