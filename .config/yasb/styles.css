@@ -1,7 +1,7 @@
 :root {
     --peach: #fab387;
     --blue: #89b4fa;
-    --lavender: #b4befe;
+    --green: #a6e3a1;
     --text: #cdd6f4;
     --overlay2: #9399b2;
     --surface1: #45475a;
@@ -12,6 +12,7 @@
     --main: #10151d;
     --widget-background: #24273a;
 }
+
 QToolTip {
     padding: 6px;
     color: #cdd6f4;
@@ -28,21 +29,26 @@ QToolTip {
     margin: 0;
     padding: 0;
 }
+
 .yasb-bar {
     padding: 0 7px;
     margin: 0;
     background-color: var(--mantle);
 }
+
+.icon {
+    font-size: 14px;
+}
+
 .widget {
     padding: 0 2px;
     margin: 0;
 }
-.icon {
-    font-size: 14px;
-}
+
 .widget .label {
     padding: 0px 2px;
 }
+
 .clock-widget .widget-container,
 .volume-widget .widget-container,
 .weather-widget .widget-container,
@@ -53,25 +59,25 @@ QToolTip {
 .cpu-widget .widget-container,
 .gpu-widget .widget-container,
 .glazewm-workspaces .widget-container,
+.komorebi-workspaces .widget-container,
 .active-window-widget .widget-container,
 .wifi-widget .widget-container {
     background-color: var(--widget-background);
     margin: 2px 0;
     border-radius: 8px;
 }
+
 .cpu-widget {
     padding-right: 0;
-}
-.memory-widget {
-    padding-left: 0;
-    padding-right: 0;
-}
-.gpu-widget {
-    padding-left: 0;
 }
 .cpu-widget .widget-container {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
+}
+
+.memory-widget {
+    padding-left: 0;
+    padding-right: 0;
 }
 .memory-widget .widget-container {
     border-bottom-left-radius: 0;
@@ -79,10 +85,15 @@ QToolTip {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
+
+.gpu-widget {
+    padding-left: 0;
+}
 .gpu-widget .widget-container {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }
+
 .glazewm-workspaces .ws-btn {
     border: none;
     margin: 0;
@@ -92,7 +103,7 @@ QToolTip {
     width: 18px;
 }
 .glazewm-workspaces .ws-btn:hover {
-    color: var(--lavender);
+    color: var(--green);
 }
 /* .glazewm-workspaces .ws-btn.populated { */
 /*     color: var(--peach); */
@@ -103,6 +114,25 @@ QToolTip {
 .glazewm-workspaces .ws-btn.active_empty {
     color: var(--peach);
 }
+
+.komorebi-workspaces .ws-btn {
+    border: none;
+    margin: 0;
+    font-size: 14px;
+    color: var(--blue);
+    height: 28px;
+    width: 18px;
+}
+.komorebi-workspaces .ws-btn:hover {
+    color: var(--green);
+}
+/* .komorebi-workspaces .ws-btn.populated { */
+/*     color: var(--peach); */
+/* } */
+.komorebi-workspaces .ws-btn.active {
+    color: var(--peach);
+}
+
 .apps-widget .label {
     font-size: 16px;
     padding: 0 1px;
@@ -110,10 +140,12 @@ QToolTip {
 .apps-widget .label:hover {
     color: var(--text);
 }
+
 .clock-widget .icon {
     color: var(--peach);
     margin-right: 4px;
 }
+
 .calendar {
     background-color: var(--crust)
 }
@@ -154,6 +186,7 @@ QToolTip {
     color: var(--blue);
     margin-top: -20px;
 }
+
 .power-menu-widget .label {
     font-size: 14px;
 }
@@ -206,12 +239,14 @@ QToolTip {
 .power-menu-popup .button.hover .icon {
     color: var(--peach);
 }
+
 .uptime {
     font-size: 16px;
     margin-bottom: 10px;
     color: var(--overlay2);
     font-weight: 600;
 }
+
 .volume-widget .icon {
     color: var(--peach);
     margin-right: 4px;
@@ -250,6 +285,7 @@ QToolTip {
 .audio-container .device:hover {
     background-color: rgba(255, 255, 255, 0.06);
 }
+
 .weather-widget .icon {
     font-size: 18px;
     margin: 0 4px 1px 0;
@@ -282,19 +318,7 @@ QToolTip {
 .weather-card-day .label {
     font-size: 12px;
 }
-.taskbar-widget {
-    padding: 0;
-    margin: 0;
-    border: none;
-}
-.taskbar-widget .app-container {
-    padding: 0 6px;
-    border: none;
-    margin: 0;
-}
-.taskbar-widget .app-container .app-title {
-    padding-left: 4px;
-}
+
 .home-widget {
     padding: 2px 4px 2px 0px;    
 }
@@ -323,6 +347,7 @@ QToolTip {
     max-height: 1px;
     background-color: rgba(157, 180, 141, 0.116);
 }
+
 .media-widget .widget-container {
     padding: 0 8px;
 } 
@@ -353,9 +378,7 @@ QToolTip {
 .media-widget .btn.disabled {
 	color: var(--surface1);
 }
-.notification-widget .icon {
-    color: var(--peach);
-}
+
 .cpu-widget .icon {
     color: var(--peach);
     margin-right: 4px;

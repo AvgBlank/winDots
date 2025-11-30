@@ -28,7 +28,8 @@ bars:
     widgets:
       left: [
         "home",
-        "glazewm_workspaces",
+        # "glazewm_workspaces",
+        "komorebi_workspaces",
         "active-window"
       ]
       center: [
@@ -48,13 +49,19 @@ widgets:
   glazewm_workspaces:
     type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
-      offline_label: "\u23fc GlazeWM Offline"
-      # empty_label: "\uf444"
-      # populated_label: "\uf444"
-      # active_empty_label: "\uf192"
-      # active_populated_label: "\uf192"
       hide_empty_workspaces: true
-      hide_if_offline: false
+      hide_if_offline: true
+      container_padding:
+        top: 0
+        left: 8
+        bottom: 0
+        right: 8
+  komorebi_workspaces:
+    type: "komorebi.workspaces.WorkspaceWidget"
+    options:
+      label_offline: "Komorebi Offline"
+      hide_empty_workspaces: true
+      hide_if_offline: true
       container_padding:
         top: 0
         left: 8

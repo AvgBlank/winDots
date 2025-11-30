@@ -1,4 +1,5 @@
-﻿#SingleInstance
+﻿#Requires AutoHotkey >=1.1.36 <1.2
+#SingleInstance Force
 
 ;;;;;;;;;;;! Variables ;;;;;;;;;;;
 ;;;;? Applications ;;;;
@@ -13,3 +14,4 @@ music := "spotify" ;* Music Client
 #^b::Run, %browser% ;* Browser ==> Win + Control + B
 #^e::Run, %code% ;* Code Editor ==> Win + Control + E
 #^s::Run, %music% ;* Spotify ==> Win + Control + S
+

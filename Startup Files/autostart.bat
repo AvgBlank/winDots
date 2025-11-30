@@ -25,4 +25,4 @@ if '%errorlevel%' NEQ '0' (
 ::--------------------------------------
 
 ::ENTER YOUR CODE BELOW:
-powershell -w hidden "sudo; & '%userprofile%\Documents\Autohotkey\AdminKeybindings.ahk'; & '%userprofile%\AppData\Roaming\AltDrag\AltDrag.exe'; & 'C:\Program Files\Flameshot\bin\flameshot.exe'; & 'C:\Program Files\glzr.io\GlazeWM\glazewm.exe'; pause"
+powershell -w hidden "sudo; & '%userprofile%\.config\autohotkey\AdminKeybindings.ahk'; & '%userprofile%\AppData\Roaming\AltDrag\AltDrag.exe'; & 'C:\Program Files\Flameshot\bin\flameshot.exe'; komorebic start; pause"
