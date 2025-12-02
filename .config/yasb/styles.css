@@ -327,7 +327,7 @@ QToolTip {
     border-radius: 8px;    
 }
 .home-widget .icon:hover {
-    color: var(--text);
+    color: var(--green);
 }
 .home-menu {
     background-color: var(--crust);
@@ -341,7 +341,7 @@ QToolTip {
 }
 .home-menu .menu-item:hover {
     background-color: rgba(157, 180, 141, 0.116);
-    color: #fff;
+    color: var(--green);
 }
 .home-menu .separator {
     max-height: 1px;
@@ -369,7 +369,7 @@ QToolTip {
     font-size: 12px;
 }
 .media-widget .btn:hover {
-	color: #babfd3;
+	color: var(--green);
 }
 .media-widget .btn.play {
 	font-size: 17px;
